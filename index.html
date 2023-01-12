@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple" rel="stylesheet">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image:url(images/backgroundtravel.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align:center;
+            position:relative;
+        }
+        section{
+            width:100%;
+            height:100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align:center;
+            position:relative;
+        }
+        div,section,span,ul,li,a{
+            box-sizing:bordr-box;
+        }
+        #home{
+            padding:5px;
+        }
+        header{
+            width:100%;
+            position:fixed;
+            z-index:999;
+        }
+        nav{
+            background-color: whitesmoke;
+            height:35px;
+            padding:5px;
+            width:100%;
+        }
+        nav h1{
+            padding-top:0px;
+            float:left;
+            font-family: 'Tangerine',sans-serif;
+            text-shadow: 4px 4px 4px #aaa;
+            color:black;
+            font-size:300%;
+        }
+        nav ul{
+            background-color: whitesmoke;
+            border-radius:4px;
+            font-size:100%;
+            padding:10px;
+            padding-left:15px;
+            float:right;
+            list-style: none;
+        }
+        nav ul li{
+            display:inline;
+        }
+        nav ul li a{
+            padding-top:0px;
+            color:black;
+            padding-left:15px;
+            text-decoration:none;
+            
+        }
+        nav ul li a:hover{
+            color:blue;
+            transition:color 0.2s;
+        }
+        .one h1{
+            position:absolute;
+            top:30%;
+            left:30%;
+            font-family: 'Tangerine',sans-serif;
+            color:white;
+            font-size:800%;
+            text-shadow:10px 10px 10px black;
+        }
+        .btn {
+             background: #3498db;
+             background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+             background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+             background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+             background-image: -o-linear-gradient(top, #3498db, #2980b9);
+             background-image: linear-gradient(to bottom, #3498db, #2980b9);
+             -webkit-border-radius: 28;
+             -moz-border-radius: 28;
+             border-radius: 28px;
+             border:none;
+             outline:none;
+             font-family: Arial;
+             color: #ffffff;
+             font-size: 20px;
+             padding: 10px 20px 10px 20px;
+             text-decoration: none;
+             position:absolute;
+             left:200px;
+             top:80%;
+        }
+        
+        .btn:hover {
+             background: #3cb0fd;
+             background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+             text-decoration: none;
+        }
+        .btn1 {
+             background: #3498db;
+             background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+             background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+             background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+             background-image: -o-linear-gradient(top, #3498db, #2980b9);
+             background-image: linear-gradient(to bottom, #3498db, #2980b9);
+             -webkit-border-radius: 28;
+             -moz-border-radius: 28;
+             border-radius: 28px;
+             border:none;
+             outline:none;
+             font-family: Arial;
+             color: #ffffff;
+             font-size: 20px;
+             padding: 10px 20px 10px 20px;
+             text-decoration: none;
+             position:absolute;
+             right:50px;
+             top:80%;
+        }
+        
+        .btn1:hover {
+             background: #3cb0fd;
+             background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+             background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+             text-decoration: none;
+        }
+        .one a{
+            text-decoration: none;
+            color:#fff;
+        }
+        #contact h5{
+            color:black;
+            text-shadow:0px 0px 10px #7F167F;
+            text-align:center;
+            font-size:300%;
+            font-family:'Rancho',sans-serif;
+        }
+        #ABOUT ul{
+            text-align:center;
+            position:absolute;
+            left:30%;
+            top:85%;
+        }
+        #ABOUT ul li{
+            text-decoration:none;
+            display:inline;
+            padding:10px 5px;
+           
+        }
+        ion-icon{
+            height:25px;
+            width:25px;
+            color: black;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+        ion-icon:hover{
+            color:#7F167F;
+        }
+        .me{
+            width:30%;
+            height:70%;
+            position:absolute;
+            left:15%;
+            top:15%;
+            background-color:white;
+            border-radius:50px;
+            
+        }
+        .me1{
+            width:30%;
+            height:70%;
+            position:absolute;
+            left:50%;
+            top:15%;
+            background-color:white;
+            border-radius:50px;
+        }
+        .im{
+            background-color: #7F167F;
+            height:200px;
+            z-index:1000;
+            border-top-left-radius:50px;
+            border-top-right-radius:50px;
+        }
+        .image{
+            width:250px;
+            height:250px;
+            border-radius:50%;
+            padding-bottom:25px;
+            margin-bottom:30px;
+        }
+        .t{
+            position:absolute;
+            top:60%;
+            left:25%;
+            color:#7F167F;
+        }
+        form h1{
+            color:#7F167F;
+            font-family:'Popins',sans-serif;
+        }
+        .f{ 
+            width:70%;
+            position:absolute;
+            left:15%;
+            top:15%;
+            background-color:#fff;
+            text-align:center;
+            border-radius:10px;
+            margin-bottom:50px;
+        }
+        input{
+            padding:20px;
+            background-color:#DFF6FF;
+            border-radius:8px;
+            margin:15px;
+            width:60%;
+            outline:none;
+            border:none;
+        }
+        textarea{
+            padding:20px;
+            background-color:#DFF6FF;
+            border:none;
+            border-radius:10px;
+            outline:none;
+            width:60%;
+        }
+        .button{
+            color:#fff;
+            padding:10px 15px;
+            border-radius:5px;
+            background-color:#7F167F;
+            margin-top:10px;
+            border:none;
+            outline:none;
+            cursor:pointer;
+        }
+        .button:hover{
+            background-color:orange;
+        }
+    </style>
+</head>
+<body>
+    <section id="home">
+        <header>
+        <nav>
+            <h1>WanderLust</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ABOUT">About Us</a></li>
+                <li><a href="#CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+        <div class="one">
+            <h1>WanderLust</h1>
+            <button class="btn"><a href="India.html">IN INDIA</a></button>
+            <button class="btn1"><a href="outsideIndia.html">Out Side India</a></button>
+        </div>  
+    </section>
+    <section id="ABOUT">
+        <div class="me">
+            <div class="im">
+            <img class="image" src="images/marshmellome.jpg">
+            </div>
+            <div class="t">
+            <h1>Marshmello</h1>
+            <p>CEO of WanderLust</p>
+            <p>An eronomus Traveller</p>
+            </div>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100087757602941&mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+                <li><a href="https://twitter.com/Saiushasree_K?t=AEisCsamwZRcXI-TZLe2IQ&s=09"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://instagram.com/yuvatejasvi__reddy?igshid=YmMyMTA2M2Y="><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="mailto:iec2022082@iiita.ac.in"><ion-icon name="mail-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+        <div class="me1">
+            <div class="im">
+            <img class="image" src="images/Justin.jpg">
+            </div>
+            <div class="t">
+            <h1>Justin Bieber</h1>
+            <p>Co-Founder of WanderLust</p>
+            <p>A travel Guide</p>
+            </div>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100087757602941&mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+                <li><a href="https://twitter.com/Saiushasree_K?t=AEisCsamwZRcXI-TZLe2IQ&s=09"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://instagram.com/yuvatejasvi__reddy?igshid=YmMyMTA2M2Y="><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="mailto:iec2022082@iiita.ac.in"><ion-icon name="mail-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="CONTACT">
+        <div class="f">
+        <form action="https://formspree.io/f/meqwqbvv" method="POST">
+            <h1>Get In Touch</h1>
+            <br>
+            <input name="Name" type="text" id="NAME" placeholder="Enter Your Name">
+            <br>
+            <input name="Email" type="text" id="EMAIL" placeholder="YourEmail@gmail.com">
+            <br>
+            <input name="Phone No" type="text" id="PHONE" placeholder="9876543210">
+            <br>
+            <textarea name="Message" id="MESSAGE" cols="40" rows="15">Feed Back :)</textarea>
+            <br>
+             <button type="submit" class="button">Send</button>
+        </form>
+        </div>
+    </section>   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
